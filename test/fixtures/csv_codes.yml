@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  garment: MyString
+  code: MyString
+  property: MyString
+  values: MyText
+
+two:
+  garment: MyString
+  code: MyString
+  property: MyString
+  values: MyText

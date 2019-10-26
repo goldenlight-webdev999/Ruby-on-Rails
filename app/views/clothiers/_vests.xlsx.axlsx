@@ -1,0 +1,14 @@
+
+  #Heading
+  sheet.add_row ["Vest Size Information", nil, nil,nil,nil,nil], :style => subheading, :height => 22
+  sheet.merge_cells sheet.rows.last.cells[(0..5)]
+  
+  #Body
+  sheet.add_row [" Chest ", customer['vest']['chest'], " Stomach ", customer['vest']['stomach'], " Front Length ", customer['vest']['front_length']], :style => [gold, center, gold, center, gold, center], :height => 18
+  sheet.add_row [" Back Length ", customer['vest']['back_length'], " Armhole Adjust ", customer['vest']['armhole_adjust'], " Shoulder Adjust ", customer['vest']['shoulder_adjust']], :style => [gold, center, gold, center, gold, center], :height => 18
+  sheet.add_row [" Front Button Adjust ", customer['vest']['front_button_stance_adjust'], nil,nil,nil,nil], :style => [gold, center], :height => 18
+  sheet.merge_cells sheet.rows.last.cells[(2..5)]
+  
+  #Notes Field
+  sheet.add_row ["Notes", customer['vest']['notes'].gsub('notes', ''), nil,nil,nil,nil], :style => [gold, center, center, center,center,center], :height => 36
+  sheet.merge_cells sheet.rows.last.cells[(1..5)]

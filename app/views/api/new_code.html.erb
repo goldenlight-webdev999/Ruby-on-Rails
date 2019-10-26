@@ -1,0 +1,191 @@
+     <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Order API Manager - <b><%= @garment %></b></h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div id="vue">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-plus fa-fw"></i> Click to Edit <%= @garment %> Codes
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                  <div>
+                    <table class="table table-bordered table-hover table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th width="100">Code</th>
+                                            <th>Conditions</th>
+                                            <th width="60">Edit</th>
+                                        </tr>
+                                    </thead>
+                        <template v-for="(row,index) in code_list">
+                            <tr>
+                                <td style="text-align:center;padding:10px;" v-text="row.code"></td>
+                                <td style="padding:10px;">
+                                    <template v-for="(current,cond_index) in row['conditions']">
+                                        <span v-if="cond_index > 0">&nbsp;<b>AND</b>&nbsp;</span>
+                                        <span v-for="(value,key) in current">{{key}} <i><u>{{value['condition']}}</u></i> {{value['value']}}</span>
+                                    </template>
+                                </td>
+                                <td style="padding:10px;"><button class="btn-sm btn btn-warning" @click="edit(index)">Edit</button></td>
+                            </tr>
+                        </template>
+                    </table>
+                  </div>      
+                </div>
+                <!-- /.panel-body -->
+            </div>
+          </div>
+          <div class="col-lg-4">
+                        <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-plus fa-fw"></i> Add Code to <%= @garment %>
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                        <fieldset>
+                                <div class="form-group"><input id="factoryCode" type="text" class="form-control" placeholder="Factory Code - exactly as it needs to be for " v-model="code" required autofocus></div>
+                                <div class="form-group"><b>New Condition</b></div>
+                                <div class="form-group"><input id="properyName" type="text" class="form-control" placeholder="Property (exactly as it shows up on orders)" v-model="current_property" required></div>
+                                <div class="form-group">
+                                    <label for="conditional">Conditional Statement</label>
+                                    <select class="form-control" id="conditional" v-model="current_condition">
+                                        <option value="equals">Equals</option>
+                                        <option value="not">Doesn't Equal</option>
+                                        <option value="contains">Contains</option>
+                                    </select>
+                                </div>
+                                <div class="form-group"><input type="text" class="form-control" placeholder="Checked Value" v-model="current_value" required></div>
+                                <div v-text="message"></div>
+                                <button v-show="readyToAdd" class="btn btn-lg btn-warning btn-block" @click="push_current()">Add Condition</button>
+                                <button v-show="readyToAdd && current_id == ''" class="btn btn-lg btn-success btn-block" @click="save_current()">Save New</button>
+                                <button v-show="readyToAdd && current_id !== ''" class="btn btn-lg btn-danger btn-block" @click="update_current()">Save Update</button>
+                        </fieldset>
+                        <table style="margin-top:15px;" class="table table-bordered table-hover table-striped" v-show="staging">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th width="100">Target</th>
+                                            <th>Conditions</th>
+                                        </tr>
+                                    </thead>
+                        <template v-for="(row,index) in staged_conditions">
+                            <tr v-for="(value, key) in row"><td style="padding:10px;"><button class="btn-sm btn btn-warning" @click="remove_staged(index)">x</button></td><td style="padding:10px;" v-text="key"></td><td style="padding:10px;" v-text="row[key]['condition'] + ' ' + row[key]['value']"></td></tr>
+                        </template>
+                    </table>
+                        <p style="text-align:center;padding:15px 15px 0 15px;font-size:12px;color:#999"><i>If there is more than one condition don't forget to click 'Add Condition' before saving or your last condition will not be added.  Updates to current codes won't be saved until you click the 'Save Update' button to commit them.</i></p>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+<script>
+window.onload = function(){
+  axios.defaults.headers.common['X-CSRF-Token'] = '<%= form_authenticity_token %>';
+  axios.defaults.headers.common.Accept = 'application/json';
+  
+  var app = new Vue({
+      el: '#vue',
+      data: {
+        message: "",
+        code_list: <%= @code_list %>,
+        code: "",
+        current_property: "",
+        current_value: "",
+        current_condition: "equals",
+        readyToAdd: true,
+        staged_conditions: [],
+        current_id: "",
+        current_index: ""
+      },
+      methods:{
+          push_current: function(){
+            let current_line = {};
+            current_line[this.current_property] = {'condition': this.current_condition, 'value': this.current_value};
+            this.staged_conditions.push(current_line);
+          },
+          remove_staged: function(index){
+              this.staged_conditions.splice(index,1)
+          },
+          edit: function(index){
+              this.current_id = this.code_list[index]['id']
+              this.current_index = index
+              this.code = this.code_list[index]['code']
+              this.staged_conditions = this.code_list[index]['conditions']
+          },
+          update_current: function(){
+            if (this.code == ""){
+                this.message = "Need to Specify the Factory Code"
+            }else{
+            if(this.staged_conditions.length < 1){this.push_current();}
+            var self = this;
+            self.readyToAdd = false;
+            axios.post('/api/update/' + self.current_id, {'code': self.code,'garment': '<%= @garment %>', 'conditions': JSON.stringify(self.staged_conditions) }, {'Content-Type': 'application/json'})
+            .then(function (response) {
+                var parsed = JSON.parse(response.data)
+                if(parsed['id'] == null){
+                   self.message = parsed['message'];
+                }else{
+                   self.code_list[self.current_index] = parsed;
+                   self.message = "Code Update"
+                   self.clearfields();
+                }
+                
+                self.readyToAdd = true;
+                })
+            .catch(function (error) {
+              console.log(error);
+            });
+            }  
+          },
+          save_current: function(){
+            if (this.code == ""){
+                this.message = "Need to Specify the Factory Code"
+            }else{
+            if(this.staged_conditions.length < 1){this.push_current();}
+            var self = this;
+            self.readyToAdd = false;
+            axios.post('/api/create', {'code': self.code,'garment': '<%= @garment %>', 'conditions': JSON.stringify(self.staged_conditions) }, {'Content-Type': 'application/json'})
+            .then(function (response) {
+                var parsed = JSON.parse(response.data)
+                if(parsed['id'] == null){
+                   self.message = parsed['message'];
+                }else{
+                   self.code_list.push(parsed);
+                   self.message = "Code Created"
+                   self.clearfields();
+                }
+                
+                self.readyToAdd = true;
+                })
+            .catch(function (error) {
+              console.log(error);
+            });
+            }  
+          },
+          clearfields: function(){
+                this.staged_conditions = [];
+                this.code = ""
+                this.current_property = ""
+                this.current_value = ""
+                this.current_id = ""
+                this.current_index = ""
+          }
+      },
+      computed:{
+        staging: function(){
+            return this.staged_conditions.length > 0
+        }
+      }
+    });
+}
+</script>

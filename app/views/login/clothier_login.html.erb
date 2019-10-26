@@ -1,0 +1,15 @@
+                    <%= form_tag({:controller => "login", :action => "clothier_login"}, :method => "post") %>
+                        <fieldset>
+                            <div class="form-group">
+                                <%= text_field(:user, :email, :class => "form-control", :placeholder => "Email Address", :autofocus => true ) %>
+                            </div>
+                            <div class="form-group">
+                                <%= password_field(:user, :password, :class => "form-control", :placeholder => "Password") %>
+                            </div>
+                            <input type="hidden" value="<%= params['order'] %>" name="order" />
+                            <!-- Change this to a button or input when using this as a form -->
+                            <button type="submit" class="btn btn-lg btn-success btn-block">Clothier Login</button>
+                            <div class="reset_links"><a href="/login/recovery/clothier">Reset Password</a> | <a href="/login/admin<% if params['order'] %>?order=<%= params['order'] %><% end %>">Switch to Admin</a></div>
+                        </fieldset>
+                    </form>
+                    <% if @message != "" and @message != nil %><p style="text-align:center;padding:15px"><%= @message %></p><% end %>

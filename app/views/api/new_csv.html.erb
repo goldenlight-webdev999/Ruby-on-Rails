@@ -1,0 +1,235 @@
+     <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Upload Codes For <b><%= @garment %></b></h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div id="vue">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-plus fa-fw"></i> Click to Edit <%= @garment %> Codes
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                  <div>
+                    <table class="table table-bordered table-hover table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Property</th>
+                                            <th width="100">Code</th>
+                                            <th width="60"></th>
+                                        </tr>
+                                    </thead>
+                        <template v-for="(row,index) in code_list">
+                            <tr>
+                                <td style="padding:10px;">{{ row.name }} <span style="font-weight:bold;color:red;" v-show="row.errors">ERRORS IN FILE!</span></td>
+                                <td style="text-align:center;padding:10px;"><span v-if="row.code !== ''">{{ row.code }}</span><span v-if="row.code == ''"> -- </span></td>                                
+                                <td style="padding:10px;"><button class="btn-sm btn btn-danger" @click="remove(row.id)">Delete</button></td>
+                            </tr>
+                        </template>
+                    </table>
+                  </div>      
+                </div>
+                <!-- /.panel-body -->
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-plus fa-fw"></i> Add Main Fabric Codes to <%= @garment %>
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                        <fieldset>
+                                <div class="form-group"><input type="file" id="fabric_upload" ref="fabric_upload" v-on:change="fabricUpload()"/></div>
+                        </fieldset>
+                        <button class="btn btn-lg btn-danger btn-block" @click="fabrics_upload()"><span v-show="fabric_loading">Uploading Your CSV...</span><span v-show="!fabric_loading">Upload Main Fabric List</span></button>                        
+                        <p style="text-align:center;padding:10px 0 0 0;font-size:12px;color:#999">Your csv file must have columns named: 'name', 'mill', 'code' where the code is the variable part of the compound code (use lowercase for headings). <i>Uploading a new file will overwrite the old one.</i></p>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-plus fa-fw"></i> Add Other Property Codes to <%= @garment %>
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                        <fieldset>
+                                <div class="form-group input-group"><input id="factoryCode" type="text" class="form-control" placeholder="Code part before the =" v-model="code"><span class="input-group-addon"><b> = </b></span></div>
+                                <div class="form-group"><input id="propertyName" type="text" class="form-control" placeholder="Property (exactly as it shows up on orders)" v-model="current_property"></div>
+                                <div class="form-group"><input type="file" id="csv_upload" ref="csv_upload" v-on:change="csvUpload()"/></div>
+                                <div v-text="message"></div>
+                                <button v-show="readyToAdd" class="btn btn-lg btn-warning btn-block" @click="csv_upload()"><span v-show="csv_loading">Uploading Your CSV...</span><span v-show="!csv_loading">Upload CSV</span></button>
+                        </fieldset>
+                        <p style="text-align:center;padding:10px 0 0 0;font-size:12px;color:#999">Your csv file must have columns named: 'name' and 'code' where the code is the variable part of the compound code (use lowercase for those headings). <i>Uploading a new file will overwrite the old one.</i></p>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+<script>
+window.onload = function(){
+  axios.defaults.headers.common['X-CSRF-Token'] = '<%= form_authenticity_token %>';
+  axios.defaults.headers.common.Accept = 'application/json';
+  
+  var app = new Vue({
+      el: '#vue',
+      data: {
+        message: "",
+        code_list: <%= @code_list %>,
+        code: "",
+        fabricFile: "",
+        csvFile: "",
+        current_property: "",
+        readyToAdd: true,
+        fabric_loading: false,
+        csv_loading: false,
+        current_id: "",
+        current_index: ""
+      },
+      methods:{
+          fabricUpload: function(){
+            this.fabricFile = this.$refs.fabric_upload.files[0];
+          },
+          csvUpload: function(){
+            this.csvFile = this.$refs.csv_upload.files[0];
+          },
+          remove: function(id){
+            window.location = "/api/csv/remove/<%= @garment %>/" + id;
+          },
+          fabrics_upload: function(){
+            this.fabric_loading = true;  
+            let formData = new FormData();
+            formData.append('file', this.fabricFile);
+            formData.append('property', 'Fabric ID');
+            formData.append('code', '');
+            
+            axios.post( '/api/csv/<%= @garment %>',
+              formData,
+              {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+              }
+            ).then(function(response){
+              this.fabricFile = ""
+              var parsed = JSON.parse(response.data);
+              window.location.reload();
+                
+            })
+          },
+          csv_upload: function(){
+            if(this.current_property !== "" && this.code !== "" && this.csvFile !== ""){
+                this.message = "";
+                this.csv_loading = true;
+                let formData = new FormData();
+                formData.append('file', this.csvFile);
+                formData.append('property', this.current_property);
+                formData.append('code', this.code);
+                
+                axios.post( '/api/csv/<%= @garment %>',
+                  formData,
+                  {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                  }
+                ).then(function(){
+                  this.csvFile = "";
+                  window.location.reload();
+                })
+                .catch(function(){
+                  console.log('FAILURE!!');
+                });    
+            }else{
+               this.message = "Missing Fields" 
+            }
+          },
+          push_current: function(){
+            let current_line = {};
+            current_line[this.current_property] = {'condition': this.current_condition, 'value': this.current_value};
+            this.staged_conditions.push(current_line);
+          },
+          remove_staged: function(index){
+              this.staged_conditions.splice(index,1)
+          },
+          edit: function(index){
+              this.current_id = this.code_list[index]['id']
+              this.current_index = index
+              this.code = this.code_list[index]['code']
+              this.staged_conditions = this.code_list[index]['conditions']
+          },
+          update_current: function(){
+            if (this.code == ""){
+                this.message = "Need to Specify the Factory Code"
+            }else{
+            if(this.staged_conditions.length < 1){this.push_current();}
+            var self = this;
+            self.readyToAdd = false;
+            axios.post('/api/update/' + self.current_id, {'code': self.code,'garment': '<%= @garment %>', 'conditions': JSON.stringify(self.staged_conditions) }, {'Content-Type': 'application/json'})
+            .then(function (response) {
+                var parsed = JSON.parse(response.data)
+                if(parsed['id'] == null){
+                   self.message = parsed['message'];
+                }else{
+                   self.code_list[self.current_index] = parsed;
+                   self.message = "Code Update"
+                   self.clearfields();
+                }
+                
+                self.readyToAdd = true;
+                })
+            .catch(function (error) {
+              console.log(error);
+            });
+            }  
+          },
+          save_current: function(){
+            if (this.code == ""){
+                this.message = "Need to Specify the Factory Code"
+            }else{
+            if(this.staged_conditions.length < 1){this.push_current();}
+            var self = this;
+            self.readyToAdd = false;
+            axios.post('/api/create', {'code': self.code,'garment': '<%= @garment %>', 'conditions': JSON.stringify(self.staged_conditions) }, {'Content-Type': 'application/json'})
+            .then(function (response) {
+                var parsed = JSON.parse(response.data)
+                if(parsed['id'] == null){
+                   self.message = parsed['message'];
+                }else{
+                   self.code_list.push(parsed);
+                   self.message = "Code Created"
+                   self.clearfields();
+                }
+                
+                self.readyToAdd = true;
+                })
+            .catch(function (error) {
+              console.log(error);
+            });
+            }  
+          },
+          clearfields: function(){
+                this.staged_conditions = [];
+                this.code = ""
+                this.current_property = ""
+                this.current_value = ""
+                this.current_id = ""
+                this.current_index = ""
+          }
+      },
+      computed:{
+        staging: function(){
+            return this.staged_conditions.length > 0
+        }
+      }
+    });
+}
+</script>

@@ -1,0 +1,15 @@
+
+  #Heading
+  sheet.add_row ["Pants Size Information", nil, nil,nil,nil,nil], :style => subheading, :height => 22
+  sheet.merge_cells sheet.rows.last.cells[(0..5)]
+  
+  #Body
+  sheet.add_row [" Waist ", customer['pants']['waist'], " Seat ", customer['pants']['seat'], " Thigh ", customer['pants']['thigh']], :style => [gold, center, gold, center, gold, center], :height => 18
+  sheet.add_row [" Knee ", customer['pants']['knee'], " Bottom Hem ", customer['pants']['bottom_hem'], " Right Outseam ", customer['pants']['right_outseam']], :style => [gold, center, gold, center, gold, center], :height => 18
+  sheet.add_row [" Left Outseam ", customer['pants']['left_outseam'], " U Rise ", customer['pants']['u_rise'], " Zipper Length ", customer['pants']['zipper_length']], :style => [gold, center, gold, center, gold, center], :height => 18
+  
+  #Notes Field
+  sheet.add_row ["Notes", customer['pants']['notes'].gsub('notes', ''), nil,nil,nil,nil], :style => [gold, center, center, center,center,center], :height => 36
+  sheet.merge_cells sheet.rows.last.cells[(1..5)]
+ 
+  

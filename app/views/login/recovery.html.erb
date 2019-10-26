@@ -1,0 +1,17 @@
+<% if @key == nil %>
+                    <%= form_tag({:controller => "login", :action => "recovery"}, :method => "post") %>
+                        <fieldset>
+                            <div class="form-group">
+                                <%= text_field(:user, :email, :class => "form-control", :placeholder => "Email Address", :autofocus => true ) %>
+                            </div>
+                            <input type="hidden" name="user[type]" value="<%= @type %>" />
+                            <button type="submit" class="btn btn-lg btn-success btn-block">Recover</button>
+                        </fieldset>
+                    </form>
+                    
+                    <% if @message != "" %><p style="text-align:center;padding:15px"><%= @message %></p><% end %>
+                    
+<% else %>
+
+
+<% end %>

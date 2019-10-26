@@ -1,0 +1,17 @@
+
+  #Heading
+  sheet.add_row ["Jacket Size Information", nil, nil,nil,nil,nil], :style => subheading, :height => 22
+  sheet.merge_cells sheet.rows.last.cells[(0..5)]
+  
+  #Body
+  sheet.add_row [" Neck ", customer['jacket']['neck'], " Chest ", customer['jacket']['chest'], " Stomach ", customer['jacket']['stomach']], :style => [gold, center, gold, center, gold, center], :height => 18
+  sheet.add_row [" Seat ", customer['jacket']['seat'], " Shoulders ", customer['jacket']['shoulder'], " Right Sleeve ", customer['jacket']['right_sleeve']], :style => [gold, center, gold, center, gold, center], :height => 18
+  sheet.add_row [" Left Sleeve ", customer['jacket']['left_sleeve'], " Bicep ", customer['jacket']['bicep'], " Back Length ", customer['jacket']['back_length']], :style => [gold, center, gold, center, gold, center], :height => 18
+  sheet.add_row [" Front Button Adjust ", customer['jacket']['front_button_stance_adjust'], " Lapel Darts ", customer['jacket']['lapel_darts'], " Shoulder Pad (Right) ", customer['jacket']['shoulder_pad_right']], :style => [gold, center, gold, center, gold, center], :height => 18
+  sheet.add_row [" Shoulder Pad (Left) ", customer['jacket']['shoulder_pad_left'], " Collar Adjust ", customer['jacket']['collar_adjust'], " Armhole Adjust ", customer['jacket']['armhole_adjust']], :style => [gold, center, gold, center, gold, center], :height => 18
+  sheet.add_row [" Forearm Adjust ", customer['jacket']['forearm_adjust'], " Half Back Adjust ", customer['jacket']['half_back_adjust'], " Gorge Line ", customer['jacket']['gorge_line']], :style => [gold, center, gold, center, gold, center], :height => 18
+  sheet.add_row [" Front Length Adjust ", customer['jacket']['front_length_adjust'], " Vent Length Adjust ", customer['jacket']['vent_length_adjust']], :style => [gold, center, gold, center], :height => 18
+  
+  #Notes Field
+  sheet.add_row ["Notes", customer['jacket']['notes'].gsub('notes', ''), nil,nil,nil,nil], :style => [gold, center, center, center,center,center], :height => 36
+  sheet.merge_cells sheet.rows.last.cells[(1..5)]

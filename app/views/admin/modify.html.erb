@@ -1,0 +1,139 @@
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Manage Admins</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div id="vue">
+        <div class="row">
+          <div class="col-lg-3">
+                        <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-plus fa-fw"></i> Add New Admin
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                        <fieldset>
+                                <div class="form-group"><input type="text" class="form-control" placeholder="First Name" v-model="first" required autofocus></div>
+                                <div class="form-group"><input type="text" class="form-control" placeholder="Last Name" v-model="last" required></div>
+                                <div class="form-group"><input type="email" class="form-control" placeholder="Email Address" v-model="email" required></div>
+                                <div class="form-group">
+                                    <label for="levels">Select Level</label>
+                                    <select class="form-control" id="levels" v-model="levels">
+                                        <option value="3">Read only</option>
+                                        <option value="5">Full Admin</option>
+                                    </select>
+                                </div>
+                                <div v-text="message"></div>
+                                <button v-show="readyToAdd" class="btn btn-lg btn-success btn-block" @click="add()">Add</button>
+                        </fieldset>                    
+                        <p style="text-align:center;padding:15px 15px 0 15px;font-size:12px;color:#999"><i>Password will be set to the Firstname + '1234' ie. <b>John1234</b>.  Using the password reset at login can reset password to whatever they want.</i></p>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-plus fa-fw"></i> Click 'Remove' to Remove Admins [except yourself]
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                  <div>
+                    <table class="table table-bordered table-hover table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Level</th>
+                                            <th width="60"></th>
+                                        </tr>
+                                    </thead>
+                        <tr v-for="row in admins"><td v-text="row.first + ' ' + row.last"></td><td v-text="row.email"></td><td v-text="rights(row.level)"></td><td><button v-if="row.id !== <%= session[:id].to_s %>" class="btn-sm btn btn-danger" @click="remove(row.id)">Remove</button></td></tr>
+                    </table>
+                  </div>      
+                </div>
+                <!-- /.panel-body -->
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+<script>
+window.onload = function(){
+  axios.defaults.headers.common['X-CSRF-Token'] = '<%= form_authenticity_token %>';
+  axios.defaults.headers.common.Accept = 'application/json';
+  
+  var app = new Vue({
+      el: '#vue',
+      data: {
+        message: "",
+        admins: <%= @list %>,
+        first: "",
+        last: "",
+        email: "",
+        levels: "3",
+        readyToAdd: true
+      },
+      methods:{
+          rights: function(level){
+                if(parseInt(level) == 3){
+                    return 'Read Only'
+                }else{
+                    return 'Full Admin'
+                }
+          },
+          add: function(){
+            var self = this;
+            readyToAdd = false;
+            axios.post('/admin/add', {'first': self.first, 'last': self.last, 'email': self.email, 'level': self.levels }, {'Content-Type': 'application/json'})
+            .then(function (response) {
+                console.log(response.data)
+                var parsed = JSON.parse(response.data)
+                if(parsed['id'] == null){
+                   self.message = "Unabled to Save Email May Be in Use"; 
+                }else{
+                  self.message = "";
+                  self.clearfields();
+                  self.admins.push(parsed);
+                }
+                self.readyToAdd = true;
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+            },
+          <% if session[:level] > 3 %>
+          remove: function(current_id){
+            var self = this;
+            axios.post('/admin/remove', {'id': current_id}, {'Content-Type': 'application/json'})
+            .then(function (response) {
+                console.log(response.data)
+                var parsed = JSON.parse(response.data)
+                if(parsed['success'] == null){
+                  self.admins = parsed
+                }else{
+                   self.message = "Couldn't Be Deleted"; 
+                }
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+            },
+            <% end %>
+          clearfields: function(){
+              first = "";
+              last = "";
+              email= "";
+              levels = "3"
+          }
+      },
+      computed:{
+    
+      }
+    });
+}
+</script>

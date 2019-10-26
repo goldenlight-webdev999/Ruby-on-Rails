@@ -1,0 +1,450 @@
+code,conditions,garment
+0018,"[{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Jacket
+0016,"[{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Jacket
+TestCode,"[{""Waistband"":{""condition"":""equals"",""value"":""Suspender Button""}},{""Front Closure"":{""condition"":""not"",""value"":""Pointed Extender with Hook & Button""}},{""Front Closure"":{""condition"":""not"",""value"":""Another Thing""}}]",Pants
+3020,"[{""Front Style"":{""condition"":""equals"",""value"":""Flat Front""}}]",Pants
+3021,"[{""Front Style"":{""condition"":""equals"",""value"":""Single Pleat""}}]",Pants
+3023,"[{""Front Style"":{""condition"":""equals"",""value"":""Double Pleat""}}]",Pants
+3449,"[{""Waistband"":{""condition"":""equals"",""value"":""Suspender Buttons""}}]",Pants
+3440,"[{""Waistband"":{""condition"":""equals"",""value"":""No Suspender Buttons""}}]",Pants
+3330,"[{""Waistband"":{""condition"":""equals"",""value"":""Belt Loops""}}]",Pants
+3329,"[{""Waistband"":{""condition"":""equals"",""value"":""No Belt Loops""}}]",Pants
+3351,"[{""Waistband"":{""condition"":""equals"",""value"":""Side Button Tab""}}]",Pants
+3352=QZMAB01,"[{""Waistband"":{""condition"":""equals"",""value"":""Side Silver Buckle""}}]",Pants
+3352=QZMAB02,"[{""Waistband"":{""condition"":""equals"",""value"":""Side Gunmetal Buckle""}}]",Pants
+3411,"[{""Front Closure"":{""condition"":""equals"",""value"":""Button No Extender""}}]",Pants
+3410,"[{""Front Closure"":{""condition"":""equals"",""value"":""Hook No Extender""}}]",Pants
+3414,"[{""Front Closure"":{""condition"":""equals"",""value"":""Square Extender with Double Hook""}}]",Pants
+3412,"[{""Front Closure"":{""condition"":""equals"",""value"":""Pointed Extender with Hook & Button""}}]",Pants
+3130,"[{""Front Pockets"":{""condition"":""equals"",""value"":""On Seam""}}]",Pants
+3104,"[{""Front Closure"":{""condition"":""equals"",""value"":""Slanted""}}]",Pants
+3132,"[{""Front Closure"":{""condition"":""equals"",""value"":""Vertical Welt""}}]",Pants
+3134,"[{""Front Closure"":{""condition"":""equals"",""value"":""Jean Pockets""}}]",Pants
+32F3,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Left - Flap with Button""}}]",Pants
+320F,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Right - Besom without Button""}}]",Pants
+360K,"[{""Cuffs"":{""condition"":""equals"",""value"":""No Cuff - Slanted Hem""}}]",Pants
+3602,"[{""Cuffs"":{""condition"":""equals"",""value"":""Standard 1.5\""""}}]",Pants
+3605,"[{""Cuffs"":{""condition"":""equals"",""value"":""Wide 2.0\""""}}]",Pants
+0011,"[{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+0012,"[{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+0013,"[{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+0017,"[{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 1 Button Fasten""}}]",Jacket
+0015,"[{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 2 Button Fasten""}}]",Jacket
+0101,"[{""Breast Pocket"":{""condition"":""equals"",""value"":""Normal""}}]",Jacket
+0150,"[{""Breast Pocket"":{""condition"":""equals"",""value"":""Patch""}}]",Jacket
+0201,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Straight - Normal Flap Straight""}}]",Jacket
+0204,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Straight - Normal Flap with Ticket""}}]",Jacket
+0231,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Straight - Double Besom Straight""}}]",Jacket
+0234,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Straight - Double Besom With Ticket""}}]",Jacket
+02A1,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Slanted - Normal Flap Slanted""}}]",Jacket
+02A2,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Slanted - Normal Flap with Ticket""}}]",Jacket
+02D1,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Slanted - Double Besom Slanted""}}]",Jacket
+3201,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Both - Besom with Button""}}]",Pants
+3200,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Both - Besom without Button""}}]",Pants
+3210,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Both - Flap without Button""}}]",Pants
+32C7,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Left - Besom with Button""}}]",Pants
+320E,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Left - Besom without Button""}}]",Pants
+32E2,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Both - Flap with Button""}}]",Pants
+320G,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Right - Besom with Button""}}]",Pants
+32F1,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Left - Flap without Button""}}]",Pants
+32F2,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Right - Flap with Button""}}]",Pants
+32E9,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Right - Flap without Button""}}]",Pants
+401C,"[{""Front Style"":{""condition"":""contains"",""value"":""3 Button""}}]",Vest
+3609,"[{""Cuffs"":{""condition"":""equals"",""value"":""No Cuff - Straight Hem""}}]",Pants
+02D3,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Slanted - Double Besom With Ticket Pocket""}}]",Jacket
+04N2,"[{""Vent"":{""condition"":""equals"",""value"":""Double Vent""}}]",Jacket
+"0624, 061D","[{""Cuff"":{""condition"":""equals"",""value"":""3 Button - Flat Slanted""}}]",Jacket
+"0624, 0612","[{""Cuff"":{""condition"":""equals"",""value"":""3 Button - Flat Straight""}}]",Jacket
+"0625, 061D","[{""Cuff"":{""condition"":""equals"",""value"":""3 Button - Kissing Slanted""}}]",Jacket
+"0625, 0612","[{""Cuff"":{""condition"":""equals"",""value"":""3 Button - Kissing Straight""}}]",Jacket
+"0621, 0612","[{""Cuff"":{""condition"":""equals"",""value"":""4 Button - Flat Straight""}}]",Jacket
+"0621, 061D","[{""Cuff"":{""condition"":""equals"",""value"":""4 Button - Flat Slanted""}}]",Jacket
+"0622, 061D","[{""Cuff"":{""condition"":""equals"",""value"":""4 Button - Kissing Slanted""}}]",Jacket
+"0622, 0612","[{""Cuff"":{""condition"":""equals"",""value"":""4 Button - Kissing Straight""}}]",Jacket
+"0627, 0612","[{""Cuff"":{""condition"":""equals"",""value"":""5 Button - Flat Straight""}}]",Jacket
+"0627, 061D","[{""Cuff"":{""condition"":""equals"",""value"":""5 Button - Flat Slanted""}}]",Jacket
+"0628, 061D","[{""Cuff"":{""condition"":""equals"",""value"":""5 Button - Kissing Slanted""}}]",Jacket
+"0628, 0612","[{""Cuff"":{""condition"":""equals"",""value"":""5 Button - Kissing Straight""}}]",Jacket
+04N1,"[{""Vent"":{""condition"":""equals"",""value"":""Single Vent""}}]",Jacket
+04N0,"[{""Vent"":{""condition"":""equals"",""value"":""No Vent""}}]",Jacket
+0231,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Straight - Double Besom Straight""}}]",Tux Jacket
+0571,"[{""Pic Stitching"":{""condition"":""equals"",""value"":""Pic Stitch""}}]",Jacket
+0570,"[{""Pic Stitching"":{""condition"":""equals"",""value"":""No Pic Stitch""}}]",Jacket
+0711,"[{""Lining"":{""condition"":""equals"",""value"":""Match Fabric""}}]",Jacket
+085E,"[{""Piping"":{""condition"":""equals"",""value"":""Match Fabric""}}]",Jacket
+0671,"[{""Collar Felt"":{""condition"":""equals"",""value"":""Match Fabric""}}]",Jacket
+064A,"[{""Buttonhole Threading"":{""condition"":""equals"",""value"":""Match Fabric""}}]",Jacket
+064C,"[{""Button Threading"":{""condition"":""equals"",""value"":""Match Fabric""}}]",Jacket
+087A,"[{""Name Label"":{""condition"":""equals"",""value"":""No Label""}}]",Jacket
+00C1,"[{""Canvassing"":{""condition"":""equals"",""value"":""Half""}}]",Jacket
+000B,"[{""Canvassing"":{""condition"":""equals"",""value"":""Semi-full (+$75)""}}]",Jacket
+000A,"[{""Canvassing"":{""condition"":""equals"",""value"":""Full (+$195)""}}]",Jacket
+064Q,"[{""Lapel Buttonhole"":{""condition"":""equals"",""value"":""Milanese Lapel Buttonhole (+$30)""}}]",Jacket
+"064P, 0658","[{""All Buttonholes"":{""condition"":""equals"",""value"":""Hand Sewn Buttonholes (+$125)""}}]",Jacket
+0011,"[{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+0012,"[{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+0013,"[{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+0017,"[{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4 Button 1 Button Fasten""}}]",Tux Jacket
+0015,"[{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4 Button 2 Button Fasten""}}]",Tux Jacket
+0018,"[{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 6-Button 1 Button Fasten""}}]",Tux Jacket
+0101,"[{""Breast Pocket"":{""condition"":""equals"",""value"":""Normal""}}]",Tux Jacket
+0150,"[{""Breast Pocket"":{""condition"":""equals"",""value"":""Patch""}}]",Tux Jacket
+0201,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Straight - Lower Flap Straight""}}]",Tux Jacket
+0204,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Straight - Normal Flap with Ticket""}}]",Tux Jacket
+0234,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Straight - Double Besom with Ticket""}}]",Tux Jacket
+02A1,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Slanted - Normal Flap Slanted""}}]",Tux Jacket
+02A2,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Slanted - Normal Flap with Ticket""}}]",Tux Jacket
+02D1,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Slanted - Double Besom Slanted""}}]",Tux Jacket
+02D3,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Slanted - Double Besom With Ticket Pocket""}}]",Tux Jacket
+"0624, 0612","[{""Cuff"":{""condition"":""equals"",""value"":""3 Button - Flat Straight""}}]",Tux Jacket
+"0624, 061D","[{""Cuff"":{""condition"":""equals"",""value"":""3 Button - Flat Slanted""}}]",Tux Jacket
+"0625, 061D","[{""Cuff"":{""condition"":""equals"",""value"":""3 Button - Kissing Slanted""}}]",Tux Jacket
+"0625, 0612","[{""Cuff"":{""condition"":""equals"",""value"":""3 Button - Kissing Straight""}}]",Tux Jacket
+"0621, 0612","[{""Cuff"":{""condition"":""equals"",""value"":""4 Button - Flat Straight""}}]",Tux Jacket
+"0621, 061D","[{""Cuff"":{""condition"":""equals"",""value"":""4 Button - Flat Slanted""}}]",Tux Jacket
+"0622, 061D","[{""Cuff"":{""condition"":""equals"",""value"":""4 Button - Kissing Slanted""}}]",Tux Jacket
+"0622, 0612","[{""Cuff"":{""condition"":""equals"",""value"":""4 Button - Kissing Straight""}}]",Tux Jacket
+"0627, 0612","[{""Cuff"":{""condition"":""equals"",""value"":""5 Button - Flat Straight""}}]",Tux Jacket
+0016,"[{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Tux Jacket
+"0627, 061D","[{""Cuff"":{""condition"":""equals"",""value"":""5 Button - Flat Slanted""}}]",Tux Jacket
+"0628, 061D","[{""Cuff"":{""condition"":""equals"",""value"":""5 Button - Kissing Slanted""}}]",Tux Jacket
+04N1,"[{""Vent"":{""condition"":""equals"",""value"":""Single Vent""}}]",Tux Jacket
+04N0,"[{""Vent"":{""condition"":""equals"",""value"":""No Vent""}}]",Tux Jacket
+0570,"[{""Pic Stitching"":{""condition"":""equals"",""value"":""No Pic Stitch""}}]",Tux Jacket
+0711,"[{""Lining"":{""condition"":""equals"",""value"":""Match Fabric""}}]",Tux Jacket
+087A,"[{""Name Label"":{""condition"":""equals"",""value"":""No Label""}}]",Tux Jacket
+00C1,"[{""Canvassing"":{""condition"":""equals"",""value"":""Half""}}]",Tux Jacket
+000B,"[{""Canvassing"":{""condition"":""equals"",""value"":""Semi-full (+$75)""}}]",Tux Jacket
+064Q,"[{""Lapel Buttonhole"":{""condition"":""equals"",""value"":""Milanese Lapel Buttonhole (+$30)""}}]",Tux Jacket
+"C065Q, C0319, C0659, C099K= DXN033A","[{""Satin"":{""condition"":""equals"",""value"":""Satin - Ivory""}}]",Tux Jacket
+"C065Q, C0319, C0659, C099K= TGES122","[{""Satin"":{""condition"":""equals"",""value"":""Satin - Grosgrain""}}]",Tux Jacket
+"0628, 0612","[{""Cuff"":{""condition"":""equals"",""value"":""5 Button - Kissing Straight""}}]",Tux Jacket
+04N2,"[{""Vent"":{""condition"":""equals"",""value"":""Double Vent""}}]",Tux Jacket
+0571,"[{""Pic Stitching"":{""condition"":""equals"",""value"":""Pic Stitch""}}]",Tux Jacket
+085E,"[{""Piping"":{""condition"":""equals"",""value"":""Match Fabric""}}]",Tux Jacket
+0671,"[{""Collar Felt"":{""condition"":""equals"",""value"":""Match Fabric""}}]",Tux Jacket
+064A,"[{""Buttonhole Threading"":{""condition"":""equals"",""value"":""Match Fabric""}}]",Tux Jacket
+064C,"[{""Button Threading"":{""condition"":""equals"",""value"":""Match Fabric""}}]",Tux Jacket
+000A,"[{""Canvassing"":{""condition"":""equals"",""value"":""Full (+$195)""}}]",Tux Jacket
+"064P, 0658","[{""All Buttonholes"":{""condition"":""equals"",""value"":""Hand Sewn Buttonholes (+$125)""}}]",Tux Jacket
+0650,"[{""Satin"":{""condition"":""equals"",""value"":""Satin - Std. Black""}}]",Tux Jacket
+"C065Q, C0319, C0659, C099K=DXN047A","[{""Satin"":{""condition"":""equals"",""value"":""Satin - Navy""}}]",Tux Jacket
+"C065Q, C0319, C0659, C099K=DXN032A","[{""Satin"":{""condition"":""equals"",""value"":""Satin - Grey""}}]",Tux Jacket
+"C065Q, C0319, C0659, C099K=DXN031A","[{""Satin"":{""condition"":""equals"",""value"":""Satin - Red""}}]",Tux Jacket
+"C065Q, C0319, C0659, C099K= DXN030A","[{""Satin"":{""condition"":""equals"",""value"":""Satin - Burgundy""}}]",Tux Jacket
+"C065Q, C0319, C0659, C099K= DXN045A","[{""Satin"":{""condition"":""equals"",""value"":""Satin - White""}}]",Tux Jacket
+"C065Q, C0319, C0659, C099K=TGES103","[{""Satin"":{""condition"":""equals"",""value"":""Satin - Matte Black""}}]",Tux Jacket
+"C065Q, C0319, C0659, C099K=TGES102","[{""Satin"":{""condition"":""equals"",""value"":""Satin - Glossy Black""}}]",Tux Jacket
+3020,"[{""Front Style"":{""condition"":""equals"",""value"":""Flat Front""}}]",Tux Pants
+3023,"[{""Front Style"":{""condition"":""equals"",""value"":""Double Pleat""}}]",Tux Pants
+3021,"[{""Front Style"":{""condition"":""equals"",""value"":""Single Pleat""}}]",Tux Pants
+"3440, 3352=QZMAB02","[{""Waistband"":{""condition"":""equals"",""value"":""No Suspender Buttons, Side Gunmetal Buckle""}}]",Tux Pants
+3411,"[{""Front Closure"":{""condition"":""equals"",""value"":""Button No Extender""}}]",Tux Pants
+3410,"[{""Front Closure"":{""condition"":""equals"",""value"":""Hook No Extender""}}]",Tux Pants
+3414,"[{""Front Closure"":{""condition"":""equals"",""value"":""Square Extender with Double Hook""}}]",Tux Pants
+3412,"[{""Front Closure"":{""condition"":""equals"",""value"":""Pointed Extender with Hook & Button""}}]",Tux Pants
+3130,"[{""Front Pockets"":{""condition"":""equals"",""value"":""On Seam""}}]",Tux Pants
+3104,"[{""Front Closure"":{""condition"":""equals"",""value"":""Slanted""}}]",Tux Pants
+3132,"[{""Front Closure"":{""condition"":""equals"",""value"":""Vertical Welt""}}]",Tux Pants
+3134,"[{""Front Closure"":{""condition"":""equals"",""value"":""Jean Pockets""}}]",Tux Pants
+3200,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Both, Besom without Button""}}]",Tux Pants
+3210,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Both, Flap without Button""}}]",Tux Pants
+320E,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Left - Besom without Button""}}]",Tux Pants
+3608,"[{""Cuffs"":{""condition"":""equals"",""value"":""No Cuff - Straight Hem""}}]",Tux Pants
+"3449, 3329","[{""Waistband"":{""condition"":""equals"",""value"":""Suspender Buttons - No Belt Loops""}}]",Tux Pants
+"3449, 3330","[{""Waistband"":{""condition"":""equals"",""value"":""Suspender Buttons - Belt Loops""}}]",Tux Pants
+"3449, 3351","[{""Waistband"":{""condition"":""equals"",""value"":""Suspender Buttons - Side Button Tab""}}]",Tux Pants
+"3449, 3352=QZMAB01","[{""Waistband"":{""condition"":""equals"",""value"":""Suspender Buttons - Side Silver Buckle""}}]",Tux Pants
+"3449, 3352=QZMAB02","[{""Waistband"":{""condition"":""equals"",""value"":""Suspender Buttons - Side Gunmetal Buckle""}}]",Tux Pants
+"3440, 3329","[{""Waistband"":{""condition"":""equals"",""value"":""No Suspender Buttons - No Belt Loops""}}]",Tux Pants
+"3440, 3351","[{""Waistband"":{""condition"":""equals"",""value"":""No Suspender Buttons - Side Button Tab""}}]",Tux Pants
+"3440, 3330","[{""Waistband"":{""condition"":""equals"",""value"":""No Suspender Buttons - Belt Loops""}}]",Tux Pants
+"3440, 3352=QZMAB01","[{""Waistband"":{""condition"":""equals"",""value"":""No Suspender Buttons - Side Silver Buckle""}}]",Tux Pants
+3201,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Both - Besom with Button""}}]",Tux Pants
+32C7,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Left - Besom with Button""}}]",Tux Pants
+32E2,"[{""Both"":{""condition"":""equals"",""value"":""Flap with Button""}}]",Tux Pants
+32F3,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Left - Flap with Button""}}]",Tux Pants
+320G,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Right - Besom with Button""}}]",Tux Pants
+32F1,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Left - Flap without Button""}}]",Tux Pants
+320F,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Right - Besom without Button""}}]",Tux Pants
+32F2,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Right - Flap with Button""}}]",Tux Pants
+32E9,"[{""Back Pockets"":{""condition"":""equals"",""value"":""Right - Flap without Button""}}]",Tux Pants
+360K,"[{""Cuffs"":{""condition"":""equals"",""value"":""No Cuff - Slanted Hem""}}]",Tux Pants
+3605,"[{""Cuffs"":{""condition"":""equals"",""value"":""Wide 2.0\""""}}]",Tux Pants
+33A2=DXN044A,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband - Std. Black""}}]",Tux Pants
+33A2=DXN031A,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband - Red""}}]",Tux Pants
+331F=DXN030A,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Stripe - Burgundy""}}]",Tux Pants
+331F=TGES122,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Stripe - Grosgrain""}}]",Tux Pants
+331F=TGES102,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Stripe - Glossy Black""}}]",Tux Pants
+"33A2, 331F = DXN044A","[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband & Stripe - Std. Black""}}]",Tux Pants
+"33A2, 331F= DXN032A","[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband & Stripe - Grey""}}]",Tux Pants
+"33A2, 331F= DXN047A","[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband & Stripe - Navy""}}]",Tux Pants
+"33A2, 331F=DXN031A","[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband & Stripe - Red""}}]",Tux Pants
+"33A2, 331F = DXN030A","[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband & Stripe - Burgundy""}}]",Tux Pants
+"33A2, 331F=TGES102","[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband & Stripe - Glossy Black""}}]",Tux Pants
+5AL3,"[{""Collar Style"":{""condition"":""contains"",""value"":""Pointed""}},{""Collar Style"":{""condition"":""contains"",""value"":""Long""}}]",Shirt
+5AL7,"[{""Collar Style"":{""condition"":""contains"",""value"":""Spread""}},{""Collar Style"":{""condition"":""contains"",""value"":""Short""}}]",Shirt
+5AL8,"[{""Collar Style"":{""condition"":""contains"",""value"":""Spread""}},{""Collar Style"":{""condition"":""contains"",""value"":""Medium""}}]",Shirt
+5AL9,"[{""Collar Style"":{""condition"":""contains"",""value"":""Spread""}},{""Collar Style"":{""condition"":""contains"",""value"":""Long""}}]",Shirt
+5AM1,"[{""Collar Style"":{""condition"":""contains"",""value"":""Cutaway""}},{""Collar Style"":{""condition"":""contains"",""value"":""Short""}}]",Shirt
+5AM2,"[{""Collar Style"":{""condition"":""contains"",""value"":""Cutaway""}},{""Collar Style"":{""condition"":""contains"",""value"":""Medium""}}]",Shirt
+5AM3,"[{""Collar Style"":{""condition"":""contains"",""value"":""Cutaway""}},{""Collar Style"":{""condition"":""contains"",""value"":""Long""}}]",Shirt
+5291,"[{""Collar Style"":{""condition"":""contains"",""value"":""Hidden Button""}}]",Shirt
+5290,"[{""Collar Style"":{""condition"":""contains"",""value"":""Button Down""}}]",Shirt
+5703,"[{""Collar Style"":{""condition"":""contains"",""value"":""Stiff""}}]",Shirt
+5701,"[{""Collar Style"":{""condition"":""contains"",""value"":""Soft""}}]",Shirt
+5250,"[{""Collar Style"":{""condition"":""contains"",""value"":""Band""}}]",Shirt
+5410,"[{""Cuff Style"":{""condition"":""contains"",""value"":""Round""}},{""Cuff Style"":{""condition"":""contains"",""value"":""1 Button""}}]",Shirt
+545F,"[{""Cuff Style"":{""condition"":""contains"",""value"":""Round""}},{""Cuff Style"":{""condition"":""contains"",""value"":""French Double Fold""}}]",Shirt
+5409,"[{""Cuff Style"":{""condition"":""contains"",""value"":""Round""}},{""Cuff Style"":{""condition"":""contains"",""value"":""French Single Fold""}}]",Shirt
+3602,"[{""Cuffs"":{""condition"":""equals"",""value"":""Standard 1.5\""""}}]",Tux Pants
+33A2=DXN032A,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband - Grey""}}]",Tux Pants
+33A2=DXN047A,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband - Navy""}}]",Tux Pants
+33A2=DXN030A,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband - Burgundy""}}]",Tux Pants
+33A2=DXN045A,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband - White""}}]",Tux Pants
+33A2=DXN033A,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband - Ivory""}}]",Tux Pants
+33A2=TGES122,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband - Grosgrain""}}]",Tux Pants
+33A2=TGES103,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband - Matte Black""}}]",Tux Pants
+33A2=TGES102,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband - Glossy Black""}}]",Tux Pants
+331F=DXN044A,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Stripe - Std. Black""}}]",Tux Pants
+331F=DXN032A,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Stripe - Grey""}}]",Tux Pants
+331F=DXN047A,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Stripe - Navy""}}]",Tux Pants
+331F=DXN031A,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Stripe - Red""}}]",Tux Pants
+331F=DXN045A,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Stripe - White""}}]",Tux Pants
+331F=DXN033A,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Stripe - Ivory""}}]",Tux Pants
+331F=TGES103,"[{""Satin"":{""condition"":""equals"",""value"":""Satin Stripe - Matte Black""}}]",Tux Pants
+"33A2, 331F= DXN045A","[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband & Stripe - White""}}]",Tux Pants
+"33A2, 331F= DXN033A","[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband & Stripe - Ivory""}}]",Tux Pants
+"33A2, 331F=TGES122","[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband & Stripe - Grosgrain""}}]",Tux Pants
+"33A2, 331F=TGES103","[{""Satin"":{""condition"":""equals"",""value"":""Satin Waistband & Stripe - Matte Black""}}]",Tux Pants
+5AL1,"[{""Collar Style"":{""condition"":""contains"",""value"":""Pointed""}},{""Collar Style"":{""condition"":""contains"",""value"":""Short""}}]",Shirt
+5AL2,"[{""Collar Style"":{""condition"":""contains"",""value"":""Pointed""}},{""Collar Style"":{""condition"":""contains"",""value"":""Medium""}}]",Shirt
+5281,"[{""Collar Style"":{""condition"":""contains"",""value"":""No Button""}}]",Shirt
+5260,"[{""Collar Style"":{""condition"":""contains"",""value"":""Wingtip""}}]",Shirt
+5412,"[{""Cuff Style"":{""condition"":""contains"",""value"":""Round""}},{""Cuff Style"":{""condition"":""contains"",""value"":""2 Button""}}]",Shirt
+5400,"[{""Cuff Style"":{""condition"":""contains"",""value"":""Square""}},{""Cuff Style"":{""condition"":""contains"",""value"":""1 Button""}}]",Shirt
+5402,"[{""Cuff Style"":{""condition"":""contains"",""value"":""Square""}},{""Cuff Style"":{""condition"":""contains"",""value"":""2 Button""}}]",Shirt
+545D,"[{""Cuff Style"":{""condition"":""contains"",""value"":""Square""}},{""Cuff Style"":{""condition"":""contains"",""value"":""French Double Fold""}}]",Shirt
+5406,"[{""Cuff Style"":{""condition"":""contains"",""value"":""Square""}},{""Cuff Style"":{""condition"":""contains"",""value"":""French Single Fold""}}]",Shirt
+5430,"[{""Cuff Style"":{""condition"":""contains"",""value"":""Mitred""}},{""Cuff Style"":{""condition"":""contains"",""value"":""1 Button""}}]",Shirt
+5432,"[{""Cuff Style"":{""condition"":""contains"",""value"":""Mitred""}},{""Cuff Style"":{""condition"":""contains"",""value"":""2 Button""}}]",Shirt
+545E,"[{""Cuff Style"":{""condition"":""contains"",""value"":""Mitred""}},{""Cuff Style"":{""condition"":""contains"",""value"":""French Double Fold""}}]",Shirt
+5408,"[{""Cuff Style"":{""condition"":""contains"",""value"":""Mitred""}},{""Cuff Style"":{""condition"":""contains"",""value"":""French Single Fold""}}]",Shirt
+5706,"[{""Cuff Style"":{""condition"":""contains"",""value"":""Stiff""}}]",Shirt
+5705,"[{""Cuff Style"":{""condition"":""contains"",""value"":""Soft""}}]",Shirt
+538C,"[{""Pockets"":{""condition"":""contains"",""value"":""Left""}},{""Pockets"":{""condition"":""contains"",""value"":""Right""}}]",Shirt
+"57B3, 5AC2","[{""Front"":{""condition"":""equals"",""value"":""Placket with Removable Studs""}}]",Shirt
+"5101, 5AC2","[{""Front"":{""condition"":""equals"",""value"":""Placket""}}]",Shirt
+"518B, 5AC2","[{""Front"":{""condition"":""equals"",""value"":""Plain Front""}}]",Shirt
+"5103, 5AC2","[{""Front"":{""condition"":""equals"",""value"":""Hidden Button""}}]",Shirt
+538A,"[{""Pockets"":{""condition"":""contains"",""value"":""Left""}}]",Shirt
+538B,"[{""Pockets"":{""condition"":""contains"",""value"":""Right""}}]",Shirt
+5313,"[{""Pockets"":{""condition"":""contains"",""value"":""Round""}}]",Shirt
+5312,"[{""Pockets"":{""condition"":""contains"",""value"":""Hexagon""}}]",Shirt
+5140,"[{""Back"":{""condition"":""contains"",""value"":""Plain Back (No Pleats)""}}]",Shirt
+5144,"[{""Back"":{""condition"":""contains"",""value"":""No Side Pleats With Darts""}}]",Shirt
+5141,"[{""Back"":{""condition"":""contains"",""value"":""Side Pleats & No Dart""}}]",Shirt
+5171,"[{""Back"":{""condition"":""contains"",""value"":""Split Yoke""}}]",Shirt
+5170,"[{""Back"":{""condition"":""contains"",""value"":""Normal Yoke""}}]",Shirt
+5610,"[{""Buttonhole Thread"":{""condition"":""equals"",""value"":""Match Fabric""}}]",Shirt
+57N8,"[{""Buttons"":{""condition"":""equals"",""value"":""Standard""}}]",Shirt
+"0001, 00W3","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0001, 00X2","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0001, 00S3","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0001, 00N8","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0002, 00W7","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0002, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0002, 00S3","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0005, 00SF","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0005, 00W3","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0005, 00W9","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0005, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0005, 00S1","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0001, 00X2","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0001, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0001, 00N5","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0002, 00W4","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0002, 00N8","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0005, 00SF","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0005, 00W3","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0001, 00W3","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0001, 00W8","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0001, 00X7","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0002, 00W4","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0002, 00W9","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0002, 00N6","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0001, 00W3","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0005, 00W9","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0002, 00W1","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0002, 00N8","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0001, 00N8","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0002, 00W7","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0005, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0005, 00S1","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0001, 00N5","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0001, 00N8","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0002, 00X2","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0002, 00S3","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0005, 00W1","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0005, 00W3","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0005, 00W9","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0005, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0005, 00N4","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Jacket
+"0001, 00W6","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 1 Button Fasten""}}]",Jacket
+"0001, 00N1","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double breasted - 4-Button 1 Button Fasten""}}]",Jacket
+"0001, 00N4","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 1 Button Fasten""}}]",Jacket
+"0001, 00Y2","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 1 Button Fasten""}}]",Jacket
+"0002, 00W5","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 1 Button Fasten""}}]",Jacket
+"0002, 00X2","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 1 Button Fasten""}}]",Jacket
+"0002, 00W9","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 1 Button Fasten""}}]",Jacket
+"0002, 00N6","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 1 Button Fasten""}}]",Jacket
+"0002, 00S3","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 1 Button Fasten""}}]",Jacket
+"0005, 00N4","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 1 Button Fasten""}}]",Jacket
+"0001, 00W6","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 2 Button Fasten""}}]",Jacket
+"0001, 00N1","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 2 Button Fasten""}}]",Jacket
+"0001, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 2 Button Fasten""}}]",Jacket
+"0002, 00W6","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 2 Button Fasten""}}]",Jacket
+"0002, 00X4","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 2 Button Fasten""}}]",Jacket
+"0002, 00N4","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 2 Button Fasten""}}]",Jacket
+"0002, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0002, 00S3","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Jacket
+"0002, 00S1","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 2 Button Fasten""}}]",Jacket
+"0002, 00S3","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 2 Button Fasten""}}]",Jacket
+"0001, 00W6","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Jacket
+"0001, 00N4","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Jacket
+"0001, 00Y2","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Jacket
+"0002, 00W9","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Jacket
+"0002, 00N2","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-button 1 Button Fasten""}}]",Jacket
+"0002, 00Y2","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Jacket
+"0002, 00S3","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Very Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Jacket
+"0001, 00W6","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Jacket
+"0005, 00W7","[{""Lapel"":{""condition"":""contains"",""value"":""Shawl - Slim""}},{""Jacket style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Jacket
+"0005, 00N3","[{""Lapel"":{""condition"":""contains"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Jacket
+"0001, 00W3","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+"0001, 00X2","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+"0001, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+"0001, 00N8","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+"0002, 00W7","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+"0002, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+"0002, 00S3","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+"0005, 00SF","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+"0005, 00W9","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+"0005, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+"0005, 00S1","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Very Wide""}},{""Jacket style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+"0001, 00X2","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0001, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0001, 00N5","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0002, 00W4","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Slim""}},{""Jacket Stylel"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0002, 00W4","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+"0002, 00W9","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+"0002, 00N6","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+"0005, 00N3","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 2 Button Fasten""}}]",Jacket
+"0002, 00W5","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Very Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Jacket
+"0005, 00Y2","[{""Lapel"":{""condition"":""contains"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Jacket
+"0001, 00N1","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Jacket
+"0001, 00N5","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Jacket
+"0002, 00W6","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Very Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Jacket
+"0002, 00X4","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Jacket
+"0002, 00N4","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Jacket
+"0002, 00S1","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Jacket
+"0002, 00S3","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Very Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Jacket
+"0005, 00Y7","[{""Lapel"":{""condition"":""contains"",""value"":""Shawl - Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Jacket
+"0001, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Jacket
+"0001, 00S3","[{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}},{""Lapel"":{""condition"":""equals"",""value"":""Notch - Very Wide""}}]",Tux Jacket
+"0005, 00W3","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+"0002, 00N8","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0005, 00SF","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0005, 00W3","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0005, 00W9","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0001, 00W3","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+"0001, 00W8","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+"0001, 00X7","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+"0001, 00W3","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0002, 00W1","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+"0002, 00N8","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 1 Button""}}]",Tux Jacket
+"0001, 00N8","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0002, 00W7","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0002, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0002, 00S3","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0005, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0005, 00S1","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 2 Button""}}]",Tux Jacket
+"0001, 00N5","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+"0001, 00N8","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+"0002, 00X2","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+"0002, 00S3","[{""Lapel"":{""condition"":""equals"",""value"":""Peak - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+"0005, 00W1","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Very Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+"0005, 00W3","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Slim""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+"0005, 00W9","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+58UA,"[{""Cuff Style"":{""condition"":""contains"",""value"":""1 Button""}}]",Shirt
+"0005, 00N2","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+"0001, 00W6","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Slim""}},{""Jacket style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 1 Button Fasten""}}]",Tux Jacket
+"0001, 00N4","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 1 Button Fasten""}}]",Tux Jacket
+"0001, 00Y2","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Very Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 1 Button Fasten""}}]",Tux Jacket
+"0002, 00W5","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Very Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 1 Button Fasten""}}]",Tux Jacket
+"0001, 00N1","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 2 Button Fasten""}}]",Tux Jacket
+"0001, 00N2","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 2 Button Fasten""}}]",Tux Jacket
+"0002, 00W6","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Very Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 2 Button Fasten""}}]",Tux Jacket
+"0002, 00S3","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Very Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 2 Button Fasten""}}]",Tux Jacket
+"0001, 00W6","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Tux Jacket
+"0001, 00Y2","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Tux Jacket
+"0002, 00W9","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Tux Jacket
+"0002, 00N2","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Tux Jacket
+"0002, 00Y2","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Tux Jacket
+"0002, 00S3","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Very Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Tux Jacket
+"0001, 00W6","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Tux Jacket
+"0005, 00W7","[{""Lapel"":{""condition"":""contains"",""value"":""Shawl - Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Tux Jacket
+"0005, 00Y2","[{""Lapel"":{""condition"":""contains"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Tux Jacket
+"0001, 00N1","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Tux Jacket
+"0001, 00N5","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Tux Jacket
+"0002, 00S3","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Very Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Tux Jacket
+"0005, 00Y7","[{""Lapel"":{""condition"":""contains"",""value"":""Shawl - Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Tux Jacket
+"0005, 00N4","[{""Lapel"":{""condition"":""equals"",""value"":""Shawl - Very Wide""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Single Breasted - 3 Button""}}]",Tux Jacket
+"0001, 00N1","[{""Lapel"":{""condition"":""equals"",""value"":""Notch - Standard""}},{""Jacket Style"":{""condition"":""equals"",""value"":""Double Breasted - 4-Button 1 Button Fasten""}}]",Tux Jacket
+"0002, 00X2","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 1 Button Fasten""}}]",Tux Jacket
+"0002, 00W9","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 1 Button Fasten""}}]",Tux Jacket
+"0002, 00N6","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 1 Button Fasten""}}]",Tux Jacket
+"0002, 00S3","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Very Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 1 Button Fasten""}}]",Tux Jacket
+"0005, 00N4","[{""Lapel"":{""condition"":""contains"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 1 Button Fasten""}}]",Tux Jacket
+"0001, 00W6","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 2 Button Fasten""}}]",Tux Jacket
+"0002, 00X4","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 2 Button Fasten""}}]",Tux Jacket
+"0002, 00N4","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 2 Button Fasten""}}]",Tux Jacket
+"0002, 00S1","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 2 Button Fasten""}}]",Tux Jacket
+"0001, 00N4","[{""Lapel"":{""condition"":""contains"",""value"":""Notch - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Tux Jacket
+"0005, 00N3","[{""Lapel"":{""condition"":""contains"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""4-Button 2 Button Fasten""}}]",Tux Jacket
+"0005, 00N3","[{""Lapel"":{""condition"":""contains"",""value"":""Shawl - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Tux Jacket
+"0002, 00W5","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Very Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 1 Button Fasten""}}]",Tux Jacket
+"0002, 00W6","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Very Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Tux Jacket
+"0002, 00X4","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Slim""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Tux Jacket
+"0002, 00N4","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Standard""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Tux Jacket
+"0002, 00S1","[{""Lapel"":{""condition"":""contains"",""value"":""Peak - Wide""}},{""Jacket Style"":{""condition"":""contains"",""value"":""6-Button 2 Button Fasten""}}]",Tux Jacket
+401D,"[{""Front Style"":{""condition"":""contains"",""value"":""4 Button""}}]",Vest
+401G,"[{""Front Style"":{""condition"":""contains"",""value"":""5 Button""}}]",Vest
+401P,"[{""Front Style"":{""condition"":""contains"",""value"":""6 Button""}}]",Vest
+401M,"[{""Front Style"":{""condition"":""contains"",""value"":""4x2 Buttons""}}]",Vest
+401K,"[{""Front Style"":{""condition"":""contains"",""value"":""6x3 Buttons""}}]",Vest
+401L,"[{""Front Style"":{""condition"":""contains"",""value"":""8x4 Button""}}]",Vest
+4000,"[{""Lapel Style"":{""condition"":""equals"",""value"":""Standard V-Shape""}}]",Vest
+4001,"[{""Lapel Style"":{""condition"":""equals"",""value"":""U-Shape""}}]",Vest
+4004,"[{""Lapel Style"":{""condition"":""equals"",""value"":""Notch""}}]",Vest
+4006,"[{""Lapel Style"":{""condition"":""equals"",""value"":""Peak""}}]",Vest
+4003,"[{""Lapel Style"":{""condition"":""equals"",""value"":""Shawl""}}]",Vest
+4111,"[{""Breast Pockets"":{""condition"":""equals"",""value"":""Left""}}]",Vest
+411A,"[{""Lapel Style"":{""condition"":""equals"",""value"":""Left and Right""}}]",Vest
+4300,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Welt Straight""}}]",Vest
+4301,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Double Besom""}}]",Vest
+4170,"[{""Lower Pockets"":{""condition"":""equals"",""value"":""Double Besom Slanted""}}]",Vest
+4211,"[{""Back Style"":{""condition"":""contains"",""value"":""Fabric""}}]",Vest
+4210,"[{""Back Style"":{""condition"":""contains"",""value"":""Lining""}},{""Lining"":{""condition"":""contains"",""value"":""Match Fabric""}}]",Vest
+4714,"[{""Back Style"":{""condition"":""contains"",""value"":""Lining""}},{""Lining"":{""condition"":""contains"",""value"":""Contrast Lining""}}]",Vest
+4714,"[{""Back Style"":{""condition"":""contains"",""value"":""Fabric""}},{""Lining"":{""condition"":""contains"",""value"":""Contrast Lining""}}]",Vest
+4212,"[{""Back Style"":{""condition"":""contains"",""value"":""Lining""}},{""Lining"":{""condition"":""contains"",""value"":""Contrast Lining""}}]",Vest
+4202,"[{""Back Style"":{""condition"":""contains"",""value"":""No Strap""}}]",Vest
+4200,"[{""Back Style"":{""condition"":""contains"",""value"":""With Strap""}}]",Vest
+401Z,"[{""Bottom"":{""condition"":""contains"",""value"":""Straight""}}]",Vest
+401Q,"[{""Bottom"":{""condition"":""contains"",""value"":""Pointed""}}]",Vest
+"3440, 3330","[{""Waistband"":{""condition"":""equals"",""value"":""No Suspender Buttons - Belt Loops""}}]",Tux Pants
+0544,"[{""Lapel"":{""condition"":""contains"",""value"":""Shawl""}}]",Jacket
+0544,"[{""Lapel"":{""condition"":""contains"",""value"":""Shawl""}}]",Tux Jacket
+00B5,"[{""Lapel"":{""condition"":""equals"",""value"":""""}}]",Tux Jacket
+58UA,"[{""Cuff Style"":{""condition"":""contains"",""value"":""2 Button""}}]",Shirt
+00B5,"[{""Lapel"":{""condition"":""equals"",""value"":""""}}]",Jacket

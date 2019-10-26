@@ -1,0 +1,131 @@
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Add or Deactivate Clothiers</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div id="vue">
+        <div class="row">
+          <div class="col-lg-3">
+                        <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-plus fa-fw"></i> Add New Clothier
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                        <fieldset>
+                                <div class="form-group"><input type="text" class="form-control" placeholder="First Name" v-model="first" required autofocus></div>
+                                <div class="form-group"><input type="text" class="form-control" placeholder="Last Name" v-model="last" required></div>
+                                <div class="form-group"><input type="email" class="form-control" placeholder="Email Address" v-model="email" required></div>
+                                <div class="form-group">
+                                    <label for="showrooms">Select Showroom</label>
+                                    <select class="form-control" id="showrooms" v-model="showroom">
+                                        <% @showrooms.each do |room| %>
+                                            <option value="<%= room %>"><%= room %></option>
+                                        <% end %>
+                                    </select>
+                                </div>
+                                <div v-text="message"></div>
+                                <button v-show="readyToAdd" class="btn btn-lg btn-success btn-block" @click="add()">Add</button>
+                        </fieldset>                    
+                        <p style="text-align:center;padding:15px 15px 0 15px;font-size:12px;color:#999"><i>Password will be set to the Firstname + '1234' ie. <b>John1234</b>.  Using the password reset at login can reset password to whatever they want.</i></p>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-plus fa-fw"></i> Click Button to Toggle Active Status
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                  <div>
+                    <table class="table table-bordered table-hover table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Showroom</th>
+                                            <th width="60">Active</th>
+                                        </tr>
+                                    </thead>
+                        <tr v-for="row in clothiers"><td v-text="row.id"></td><td v-text="row.first + ' ' + row.last"></td><td v-text="row.email"></td><td v-text="row.showroom"></td><td><button class="btn-sm btn" :class="{'btn-success': row.active, 'btn-danger': !row.active}" @click="toggle(row.id)"><span v-if="row.active" v-text="'Active'"></span><span v-if="!row.active" v-text="'Inactive'"></span></button></td></tr>
+                    </table>
+                  </div>      
+                </div>
+                <!-- /.panel-body -->
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+<script>
+window.onload = function(){
+  axios.defaults.headers.common['X-CSRF-Token'] = '<%= form_authenticity_token %>';
+  axios.defaults.headers.common.Accept = 'application/json';
+  
+  var app = new Vue({
+      el: '#vue',
+      data: {
+        message: "",
+        clothiers: <%= @list %>,
+        first: "",
+        last: "",
+        email: "",
+        showroom: "Beverly Hills",
+        readyToAdd: true
+      },
+      methods:{
+          toggle: function(current_id){
+            var self = this;
+            axios.post('/clothier/toggle', {'id': current_id}, {'Content-Type': 'application/json'})
+            .then(function (response) {
+                console.log(response.data)
+                current = self.clothiers[current_id - 1]
+                current.active = JSON.parse(response.data)['active']
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+            },
+          add: function(){
+            var self = this;
+            readyToAdd = false;
+            if (this.first == null || this.last == null || this.email == null){
+                message = "Missing Fields Need Name"
+            }else{
+            axios.post('/clothier/add', {'first': self.first, 'last': self.last, 'email': self.email, 'showroom': self.showroom }, {'Content-Type': 'application/json'})
+            .then(function (response) {
+                console.log(response.data)
+                var parsed = JSON.parse(response.data)
+                if(parsed['id'] == null){
+                   self.message = "Unabled to Save Email May Be in Use"; 
+                }else{
+                  self.message = "";
+                  self.clearfields();
+                  self.clothiers.push(parsed);
+                }
+                self.readyToAdd = true;
+            })
+            .catch(function (error) {
+              console.log(error);
+            });}
+            },
+          clearfields: function(){
+              first = "";
+              last = "";
+              email= "";
+              showroom = "Beverly Hills"
+          }
+      },
+      computed:{
+
+      }
+    });
+}
+</script>

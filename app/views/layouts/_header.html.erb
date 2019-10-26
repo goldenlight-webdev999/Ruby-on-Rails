@@ -1,0 +1,96 @@
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><%= image_tag "enzo.png" %></a>
+            </div>
+
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            Welcome <b><%= session[:name] %></b>
+                        </li>
+                        <% if session[:level] == 0 %>
+                        <li>
+                            <a href="#"><i class="fa fa-group fa-fw"></i> Sales History<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/commissions/<%= session[:id] %>">Current Month</a>
+                                </li>
+                                <li>
+                                    <a href="/commissions/<%= session[:id] %>/1M"><%= Time.now.months_since(-1).strftime "%B" %> History</a>
+                                </li>
+                                <li>
+                                    <a href="/commissions/<%= session[:id] %>/2M"><%= Time.now.months_since(-2).strftime "%B" %> History</a>
+                                </li>
+                                <li>
+                                    <a href="/commissions/<%= session[:id] %>/3M"><%= Time.now.months_since(-3).strftime "%B" %> History</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <% end %>
+                        <li>
+                           <a href="/customers"><i class="fa fa-group fa-user-circle"></i> Customers</a> 
+                        </li>
+                        <% if session[:level] > 1 %>
+                        <li>
+                            <a href="#"><i class="fa fa-group fa-fw"></i> Clothiers<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/clothier/list">View Clothiers</a>
+                                </li>
+                                <% if session[:level] > 3 %>
+                                <li>
+                                    <a href="/clothier/modify">Modify Clothiers</a>
+                                </li>
+                                <% end %>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="https://duj24n7884.execute-api.us-east-1.amazonaws.com/dev/checkproducts" target="_blank"><i class="fa fa-tags fa-fw"></i> Generate Products</a>
+                        </li>
+                        <li>
+                            <a href="https://4wtc7j815g.execute-api.us-east-1.amazonaws.com/dev/fabrics" target="_blank"><i class="fa fa-black-tie fa-fw"></i> Generate Fabrics</a>
+                        </li>
+                        <li>
+                            <a href="/admin/customer_passwords"><i class="fa fa-black-tie fa-fw"></i> Set Customer Password</a>
+                        </li>                        
+                        <% end %>
+                        <li>
+                            <a href="/orders"><i class="fa fa-download fa-fw"></i> Get Order Details</a>
+                        </li>
+                        <% if session[:level] > 3 %>
+                        <li>
+                            <a href="#"><i class="fa fa-hashtag fa-fw"></i> API Manager<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/api/codes">Line Item Codes</a>
+                                </li>
+                                <li>
+                                    <a href="/api/csv">Uploadable Codes</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="/admin/modify"><i class="fa fa-dashboard fa-fw"></i> Admin Options</a>
+                        </li>
+                        <% end %>
+                        <li>
+                            <a href="/logout"><i class="fa fa-arrow-circle-o-left fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>

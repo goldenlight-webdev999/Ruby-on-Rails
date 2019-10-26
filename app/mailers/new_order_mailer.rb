@@ -1,0 +1,2 @@
+class NewOrderMailer < ApplicationMailer
+end

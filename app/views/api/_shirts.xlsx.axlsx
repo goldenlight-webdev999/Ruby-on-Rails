@@ -1,0 +1,14 @@
+  #Heading
+  sheet.add_row ["Shirt Size Information", nil, nil,nil,nil,nil], :style => subheading, :height => 22
+  sheet.merge_cells sheet.rows.last.cells[(0..5)]
+  
+  #Body
+  sheet.add_row [" Neck ", customer['shirt']['neck'], " Chest ", customer['shirt']['chest'], " Stomach ", customer['shirt']['stomach']], :style => [gold, center, gold, center, gold, center], :height => 18
+  sheet.add_row [" seat ", customer['shirt']['seat']," Shoulder PTP ", customer['shirt']['shoulder_ptp'], " Right Sleeve ", customer['shirt']['right_sleeve']], :style => [gold, center, gold, center, gold, center], :height => 18
+  sheet.add_row [" Left Sleeve ", customer['shirt']['left_sleeve'], " Back Length ", customer['shirt']['back_length'], " Bicep ", customer['shirt']['bicep']], :style => [gold, center, gold, center, gold, center], :height => 18
+  sheet.add_row [" Right Cuff ", customer['shirt']['right_cuff'], " Left Cuff ", customer['shirt']['left_cuff'], " Armhole Adjust ", customer['shirt']['armhole_adjust']], :style => [gold, center, gold, center, gold, center], :height => 18
+  sheet.add_row [" Forearm Adjust ", customer['shirt']['forearm_adjust'], " Wasit Circ. Adjust ", customer['shirt']['waist_circumference_adjust']], :style => [gold, center, gold, center], :height => 18
+
+  #Notes Field
+  sheet.add_row ["Notes", customer['shirt']['notes'].gsub('notes', ''), nil,nil,nil,nil], :style => [gold, center, center, center,center,center], :height => 36
+  sheet.merge_cells sheet.rows.last.cells[(1..5)]

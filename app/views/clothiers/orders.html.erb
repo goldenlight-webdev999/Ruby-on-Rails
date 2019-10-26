@@ -1,0 +1,45 @@
+<div id="vue">
+<div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Get Order by Order Number</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+</div>
+<div class="row">
+          <div class="col-lg-4">
+                 <div class="panel-body">
+                <!-- /.panel-heading -->
+                <div class="form-group">
+                    <input name="order" class="form-control" v-model="order" placeholder="Order Number (no # just the number)" />
+                </div>
+                
+                    <button @click="pull()" class="btn btn-primary btn-lg btn-block">Download Order Details</button>
+                    
+                    <div style="font-size:18px;font-weight:bold;color:red" v-text="message" v-show="message !== ''"></div>
+                </div>
+                <!-- /.panel-body -->
+
+          </div>
+</div>
+</div>
+<script>
+window.onload = function(){
+  axios.defaults.headers.common['X-CSRF-Token'] = '<%= form_authenticity_token %>';
+  axios.defaults.headers.common.Accept = 'application/json';
+  
+  var app = new Vue({
+      el: '#vue',
+      data: {
+        order: <% if @order %>"<%=@order%>"<% else %>""<% end %>,
+        message: <% if params['message'] %>"<%= params['message'] %>"<% else %>""<% end %>
+      },
+      methods:{
+          pull: function(){
+              window.location.href = "/order/" + this.order
+          }
+      },
+      computed:{
+      }
+    });
+}
+</script>

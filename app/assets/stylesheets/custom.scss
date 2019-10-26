@@ -1,0 +1,35 @@
+body,html{
+    height: 100%;
+}
+
+.navbar-brand{
+    padding:5px 15px;
+    img{
+        max-height:40px;
+    }
+}
+
+.login-logo{
+    img{
+        max-height:40px;
+    }
+}
+
+.reset_links{
+    padding:10px 5px 0 5px;
+    text-align:center;
+    a{
+        color:#aa800d;
+    }
+}
+
+.page-header{
+    font-size:20px;
+}
+
+#aaronApp{
+    border:none;
+    height:calc(100vh - 240px);
+    width:100%;
+    
+}

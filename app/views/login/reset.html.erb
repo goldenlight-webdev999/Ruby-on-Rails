@@ -1,0 +1,18 @@
+<% if @expired %>
+
+                    <p style="text-align:center;padding:10px;">THE LINK YOU ARE USING IS INVALID OR HAS EXPIRED</p>
+<% else %>
+                    <%= form_tag({:controller => "login", :action => "reset"}, :method => "post") %>
+                        <fieldset>
+                                <div class="form-group"><input type="password" class="form-control" name="password" placeholder="New Password" required autofocus></div>
+                                <div class="form-group"><input type="password" class="form-control" name="password2" placeholder="Re-enter Password" required autofocus></div>
+                                <input name="check" value="<%= @user.reset_hash %>" type="hidden" />
+                                <input name="key" value="<%= @user.id %>" type="hidden" />
+                                <input name="type" value="<%= @type %>" type="hidden" />
+                            <button type="submit" class="btn btn-lg btn-success btn-block">Reset</button>
+                        </fieldset>
+                    </form>
+                    
+                    <% if @message != "" and @message != nil %><p style="text-align:center;padding:15px"><%= @message %></p><% end %>
+
+<% end %>

@@ -1,0 +1,171 @@
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Orders for <%= @name %> <% if session[:level] > 0 %> <a href="/commissions/xlsx/<%= @id %>?time=<%= @timeframe %>" class="btn btn-warning btn-sm">Download Report</a> <a href="/clothier/list" class="btn btn-primary btn-sm">Back to List</a><% end %></h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div id="vue">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-plus fa-fw"></i> Credited Orders
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                  <div>
+                    <table class="table table-bordered table-hover table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Order</th>
+                                            <th>Date</th>
+                                            <th>Eligible Items</th>
+                                            <th>Order Total</th>
+                                            <% if session[:level] > 0 %><th width="60">Remove</th><% end %>
+                                        </tr>
+                                    </thead>
+                        <tr v-for="(row, index) in orders">
+                           <td v-text="row.order_number"></td><td v-text="date_format(row.created_at)"></td><td v-text="row.item_count"></td><td v-text="row.subtotal_price"></td><% if session[:level] > 0 %><td><button @click="remove(row.id, index)" class="btn-sm btn btn-warning">REMOVE</button></td><% end %></tr>
+                    </table>
+                  </div>      
+                </div>
+                <!-- /.panel-body -->
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <% if session[:level] > 0 %>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-plus fa-fw"></i> Select A Report Time
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                  <div class="form-group">           
+                    <select id="timeframes" v-model="timeframe" class="form-control">
+                        <option value="">Month to Date</option>
+                        <option value="1M"><%= Time.now.months_since(-1).strftime "%B" %> Orders</option>
+                        <option value="2M"><%= Time.now.months_since(-2).strftime "%B" %> Orders</option>
+                        <option value="3M"><%= Time.now.months_since(-3).strftime "%B" %> Orders</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <% end %>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-plus fa-fw"></i> {{summary_heading}}
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                  <div class="form-group">           
+                    <p>TOTAL ORDERS: <b v-text="total_orders"></b></p>
+                    <p>EXCLUDED ORDERS: <b v-text="gift_rush_orders"></b></p>
+                    <p>TOTAL AMOUNT: <b v-text="total_dollars"></b></p>
+                    <p>TOTAL UNITS: <b v-text="total_units"></b></p>
+                    <p>AVG TRANSACTION: <b v-text="avg_transaction"></b></p>
+                    <p>AVG UNITS: <b v-text="avg_units"></b></p>
+                  </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+<script>
+window.onload = function(){
+  axios.defaults.headers.common['X-CSRF-Token'] = '<%= form_authenticity_token %>';
+  axios.defaults.headers.common.Accept = 'application/json';
+  
+  var app = new Vue({
+      el: '#vue',
+      data: {
+        message: "",
+        orders: <%= @orders %>,
+        timeframe: "<%= @timeframe %>",
+        first: "",
+        last: "",
+        filter: "all",
+        readyToAdd: true
+      },
+      methods:{
+        remove: function(id, index){
+            
+            var self = this;
+            axios.post('/commission/remove/', {'id': id}, {'Content-Type': 'application/json'})
+            .then(function (response) {
+                console.log(response.data)
+                self.orders.splice(index,1);                
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        },
+        date_format: function(date){
+            return date.split("T")[0]
+        }
+      },
+      computed:{
+            total_orders: function(){
+                return this.orders.length;
+            },
+            total_dollars: function(){
+                var count = 0.00;
+                for(var i = 0; i < this.orders.length; i++){
+                    count = count + parseFloat(this.orders[i]["subtotal_price"])
+                }
+                
+                return "$" + count.toFixed(2)
+            },
+            summary_heading:function(){
+                if(this.timeframe == ""){
+                    return "Month to Date Orders Summary"
+                }
+                if(this.timeframe == "1M"){
+                    return "<%= Time.now.months_since(-1).strftime "%B" %> Orders Summary"
+                }
+                if(this.timeframe == "2M"){
+                    return "<%= Time.now.months_since(-2).strftime "%B" %> Orders Summary"
+                }
+                if(this.timeframe == "3M"){
+                    return "<%= Time.now.months_since(-3).strftime "%B" %> Orders Summary"
+                }
+                
+            },
+            avg_transaction:function(){
+                return "$" + (parseFloat(this.total_dollars.replace("$", "")) / (this.total_orders - this.gift_rush_orders)).toFixed(2);
+            },
+            avg_units:function(){
+                return (this.total_units / (this.total_orders - this.gift_rush_orders)).toFixed(1);
+            },
+            gift_rush_orders:function(){
+                var count = 0;
+                for(var i = 0; i < this.orders.length; i++){
+                    if(this.orders[i]['item_count'] == 0){
+                      count = count + 1
+                    }
+                }
+                
+                return count
+            },
+            total_units:function(){
+                var count = 0;
+                for(var i = 0; i < this.orders.length; i++){
+                    count = count + this.orders[i]['item_count']
+                }
+                
+                return count
+            }
+      },
+        watch: {
+            timeframe: function (newTime, oldTime) {
+              window.location.href= "/commissions/<%= @id %>/" + newTime;
+            }
+      }
+    });
+}
+</script>

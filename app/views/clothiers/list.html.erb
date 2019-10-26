@@ -1,0 +1,92 @@
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">All Clothiers List</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div id="vue">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-plus fa-fw"></i> View Orders or Add to Order
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                  <div>
+                    <table class="table table-bordered table-hover table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Name</th>
+                                            <th>Showroom</th>
+                                            <th width="60">Orders</th>
+                                            <th width="60">Attach</th>
+                                        </tr>
+                                    </thead>
+                        <tr v-for="row in clothiers" v-show="filtered(row.showroom)">
+                           <td v-text="row.id"></td><td v-text="row.first + ' ' + row.last"></td><td v-text="row.showroom"></td><td><a v-bind:href="'/commissions/' + row.id" class="btn-sm btn btn-success">VIEW</a></td><td><a v-bind:href="'credit/' + row.id" class="btn-sm btn btn-warning" v-show="row.active">ADD</a></td></tr>
+                    </table>
+                  </div>      
+                </div>
+                <!-- /.panel-body -->
+            </div>
+          </div>
+                    <div class="col-lg-3">
+                        <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-plus fa-fw"></i> Filter By Showroom
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                  <div class="form-group">           
+                    <select id="filter" v-model="filter" class="form-control">
+                        <option value="all">All</option>
+                        <% @showrooms.each do |room| %>
+                        <option value="<%= room %>"><%= room %></option>
+                        <% end %>
+                    </select>
+                  </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+<script>
+window.onload = function(){
+  axios.defaults.headers.common['X-CSRF-Token'] = '<%= form_authenticity_token %>';
+  axios.defaults.headers.common.Accept = 'application/json';
+  
+  var app = new Vue({
+      el: '#vue',
+      data: {
+        message: "",
+        clothiers: <%= @list %>,
+        first: "",
+        last: "",
+        email: "",
+        filter: "all",
+        readyToAdd: true
+      },
+      methods:{
+          filtered: function(room){
+              if(self.filter.value == "all" || self.filter.value == room){
+                  return true
+                  
+              }else{
+                  return false
+                  
+              }
+          }
+      },
+      computed:{
+
+      }
+    });
+}
+</script>
